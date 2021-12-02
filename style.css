@@ -1,0 +1,100 @@
+.container {
+    padding: 50px 0;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.prograss {
+    
+    height: 50px;
+    border: 2px solid black;
+    margin-bottom: 100px;
+}
+
+@keyframes anime {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+.prograss__bar {
+    height: 100%;
+    width: 90%;
+    background-color: chartreuse;    
+    animation: anime 3s; 
+}
+
+@keyframes infinity {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+.prograss__infinity {
+    height: 100%;
+    width: 0;
+    background-color: yellow;
+    animation: infinity 5s infinite; ;
+    animation-play-state: paused;
+}
+
+.prograss:hover .prograss__infinity {
+    animation-play-state: running;
+}
+
+@keyframes cuby {
+    25% {
+        left: 50px;
+        top: 180px;
+    }
+
+    50% {
+        left: 100px;
+        top: 100px;
+    }
+
+    70% {
+        left: 150px;
+        top: 180px;
+    }
+
+    85% {
+        left: 165px;
+        top: 165px;
+    }
+
+    100% {
+        left: 180px;
+        top: 180px;
+    }
+}
+
+.cub {
+    position: relative;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 10px;
+    animation: cuby 5s linear infinite; 
+}
